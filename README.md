@@ -120,7 +120,7 @@ If you want to connect or collaborate, feel free to reach out.
 
 * Email: **[mukesh.dixena2002@gmail.com](mailto:mukesh.dixena2002@gmail.com)**
 * GitHub: **[https://github.com/Mukeshdixena](https://github.com/Mukeshdixena)**
-* LinkedIn: *(add your link if needed)*
+* LinkedIn: **[https://www.linkedin.com/in/mukesh-dixena/](https://www.linkedin.com/in/mukesh-dixena/)**
 
 ---
 
