@@ -1,42 +1,58 @@
 // main.js
-import { createApp, nextTick } from 'vue'
-import App from './App.vue'
+import { createApp, nextTick } from "vue";
+import App from "./App.vue";
 
-// Bootstrap core
-import 'bootstrap/dist/css/bootstrap.min.css'
-import * as bootstrap from 'bootstrap' // ensures JS components work
+// =============================
+// 🧩 Bootstrap Core & Icons
+// =============================
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as bootstrap from "bootstrap"; // enables JS components like Collapse, Tooltip, Modal
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-// Icons (recommended)
-import 'bootstrap-icons/font/bootstrap-icons.css'
+// =============================
+// 🎞️ AOS (Animate On Scroll)
+// =============================
+import "aos/dist/aos.css";
+import AOS from "aos";
 
-// AOS (Animate On Scroll)
-import 'aos/dist/aos.css'
-import AOS from 'aos'
+// =============================
+// 🎨 Custom Global Styles
+// =============================
+import "./styles.css";
 
-// Custom global styles
-import './styles.css'
+// =============================
+// 🚀 Create & Mount Vue App
+// =============================
+const app = createApp(App);
+app.mount("#app");
 
-// Create Vue app
-const app = createApp(App)
-
-// Mount app
-app.mount('#app')
-
-// Initialize AOS after Vue render
+// =============================
+// ✨ Initialize AOS
+// =============================
 nextTick(() => {
   AOS.init({
-    duration: 800,
-    once: true,
-    easing: 'ease-in-out',
-    offset: 80,
-  })
-})
+    duration: 800,           // Animation duration (ms)
+    once: false,             // 👈 Animations replay when re-entering viewport
+    mirror: true,            // 👈 Trigger on scroll-up
+    offset: 80,              // Distance from viewport to start animation
+    easing: "ease-out-cubic" // Smooth easing
+  });
 
-// Re-init AOS on updates (e.g. when content changes)
-document.addEventListener('DOMContentLoaded', () => AOS.refresh())
+  // Make sure all dynamically loaded elements get AOS applied
+  AOS.refreshHard();
+});
 
-// Enable Bootstrap tooltips globally
-document.addEventListener('DOMContentLoaded', () => {
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  tooltipTriggerList.map(el => new bootstrap.Tooltip(el))
-})
+// Ensure AOS refreshes after DOM fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.refresh();
+});
+
+// =============================
+// 💬 Enable Bootstrap Tooltips
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+  const tooltipTriggerList = Array.from(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el));
+});

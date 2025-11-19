@@ -19,7 +19,7 @@
           <!-- Experience card -->
           <div class="card border-0 shadow-sm rounded-4 p-4 bg-white-subtle">
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <h5 class="fw-semibold mb-0 text-dark">
+              <h5 class="fw-semibold mb-0 text-body">
                 {{ exp.role }}
                 <small class="text-muted"> @ {{ exp.company }}</small>
               </h5>
@@ -95,4 +95,15 @@ import { experiences } from '../data/experience'
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
+@media (prefers-color-scheme: dark) {
+  .dark-text-light {
+    color: #f8f9fa !important; /* light */
+  }
+
+  .dark-text-light small {
+    color: #adb5bd !important; /* lighter-muted */
+  }
+}
+
 </style>

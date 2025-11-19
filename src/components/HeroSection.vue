@@ -92,6 +92,13 @@ h1 {
   font-size: 2.4rem;
 }
 
+.lead {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 1.9rem;

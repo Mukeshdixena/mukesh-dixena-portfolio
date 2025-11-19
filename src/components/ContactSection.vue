@@ -18,9 +18,10 @@
           <a :href="linkedin" target="_blank" class="btn btn-outline-primary rounded-pill">
             <i class="bi bi-linkedin me-2"></i>LinkedIn
           </a>
-          <a :href="github" target="_blank" class="btn btn-outline-dark rounded-pill">
+          <a :href="github" target="_blank" class="btn border rounded-pill text-body">
             <i class="bi bi-github me-2"></i>GitHub
           </a>
+
         </div>
 
         <p class="small text-muted mb-0">
@@ -42,6 +43,7 @@ const github = 'https://github.com/Mukeshdixena'
   font-size: 1.8rem;
   position: relative;
 }
+
 .section-title::after {
   content: "";
   display: block;
@@ -51,9 +53,11 @@ const github = 'https://github.com/Mukeshdixena'
   border-radius: 2px;
   margin: 8px auto 0;
 }
+
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);

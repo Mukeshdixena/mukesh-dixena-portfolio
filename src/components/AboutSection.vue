@@ -1,15 +1,39 @@
 <template>
-  <section v-bind="$attrs" class="py-5 bg-body-tertiary" data-aos="fade-up">
+  <section
+    id="about"
+    v-bind="$attrs"
+    class="py-5 bg-body-tertiary"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+  >
     <div class="container">
-      <h2 class="section-title mb-4 text-primary fw-bold" data-aos="fade-right">About Me</h2>
-      
-      <p class="lead text-muted mb-4" data-aos="fade-up" data-aos-delay="100">
-        I'm a <strong>Full-Stack Developer</strong> who builds scalable web apps and AI pipelines. 
-        I enjoy tackling complex engineering challenges with <strong>Java + Spring Boot</strong> on the backend 
-        and <strong>Vue.js</strong> on the frontend — delivering clean, maintainable, and high-performing solutions.
+      <!-- Title -->
+      <h2
+        class="section-title mb-4 text-primary fw-bold"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        About Me
+      </h2>
+
+      <!-- Description -->
+      <p
+        class="lead text-muted mb-4"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        I'm a <strong>Full-Stack Developer</strong> who builds scalable web apps and AI pipelines.
+        I love tackling complex problems using <strong>Java + Spring Boot</strong> on the backend and
+        <strong>Vue 3</strong> on the frontend — focusing on clean architecture,
+        performance, and developer experience.
       </p>
 
-      <div class="d-flex flex-wrap gap-2 mt-3" data-aos="fade-up" data-aos-delay="150">
+      <!-- Skills badges -->
+      <div
+        class="d-flex flex-wrap gap-2 mt-3"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
         <span
           v-for="(skill, index) in skillsShort"
           :key="index"
@@ -25,11 +49,11 @@
 <script setup>
 const skillsShort = [
   "Java",
+  "Spring Boot",
   "Vue 3",
   "Node.js",
-  "Spring Boot",
-  "TensorFlow",
   "PostgreSQL",
+  "TensorFlow",
   "Docker",
   "AWS"
 ]
@@ -53,5 +77,19 @@ const skillsShort = [
 
 .lead {
   line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .lead {
+  color: var(--text-muted);
+}
+
+/* Badge hover */
+.badge {
+  transition: all 0.3s ease;
+}
+.badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 </style>
