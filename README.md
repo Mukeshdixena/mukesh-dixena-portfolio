@@ -119,12 +119,3 @@ If you want to connect or collaborate, feel free to reach out.
 * LinkedIn: **[https://www.linkedin.com/in/mukesh-dixena/](https://www.linkedin.com/in/mukesh-dixena/)**
 
 ---
-
-If you want, I can also:
-
-* Add badges (build, deploy, tech stack)
-* Add project screenshots
-* Add a “Credits” or “License” section
-* Add sections for contributing or issues
-
-Just tell me what you want to enhance.
