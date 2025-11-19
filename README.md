@@ -1,7 +1,3 @@
-Understood. Here is a **precise and polished README.md** tailored specifically for your repository **mukesh-dixena-portfolio**, based on the typical structure of your Vue portfolio project and matching the professional tone you expect.
-
-You can copy-paste this directly into your README.md.
-
 ---
 
 # **Mukesh Dixena – Portfolio Website**
